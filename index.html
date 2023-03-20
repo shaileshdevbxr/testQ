@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Question</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #myform {
+            display: none;
+        }
+
+        h2 {
+            color: blue;
+            background-color: rgba(200, 200, 200, 0.603);
+        }
+        label{
+            cursor: pointer;
+        }
+        form label {
+            color: black;
+        }
+
+        form input {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        button {
+            position: relative;
+            left: 9em;
+            margin: auto;
+            width: 100px;
+            height: 35px;
+            background-color: blue;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: all,2s;
+        }
+        button:hover{
+            background-color: #1f1f1f;
+            
+        }
+
+        #login-container {
+            max-width: fit-content;
+            border: 1px solid black;
+            text-align: center;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .l_page {
+            text-align: left;
+            max-width: fit-content;
+            background-color: gray;
+        }
+
+        #login-container .l_page label {
+            margin: 10px;
+            font-size: 22px;
+            color: white;
+        }
+
+        #login-container .l_page input {
+            width: 300px;
+            height: 30px;
+            font-size: 19px;
+            border-radius: 6px;
+            margin-left: 10px;
+        }
+
+        #login-container .l_page input:focus {
+            border: none;
+            outline: none;
+        }
+
+        #login-container .l_page .checckbox {
+            width: 15px;
+            height: 15px;
+            cursor: pointer;
+        }
+
+        #submit {
+            display: none;
+        }
+        @media screen and (max-width : 700px ){
+            *{
+                width: fit-content;
+            }
+            #login-container{
+                margin: auto;
+                width: 500px;
+            }
+            table{
+                max-width: 700px;
+                margin: auto;
+                overflow: scroll;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <center>
+        <div id="login-container">
+            <h2>Student Login</h2>
+            <div class="l_page">
+                <label>User name:<br>
+                    <input id="u_name" type="text" placeholder="student name." required>
+                </label><br>
+                <label>Password:<br>
+                    <input id="pass" type="password" placeholder="password" required>
+                </label><br>
+                <label><input onclick="checkbox()" class="checckbox" type="checkbox"> Remember me</label><br>
+                <button id="login_bttn">Submit</button>
+            </div>
+
+        </div>
+    </center>
+
+    <form name="myForm" id="myform">
+        <h2>
+            Q1 CPU is a _______ Device.<br>
+            <label>(A) <input type="radio" name="q1" value="A">Input</label><br>
+            <label>(B) <input type="radio" name="q1" value="B">Processing</label><br>
+            <label>(C) <input type="radio" name="q1" value="C">Output</label><br>
+            <label>(D) <input type="radio" name="q1" value="D">None of these</label><br>
+        </h2>
+        <h2>
+            Q2. Keyboard is a _______ Device.<br>
+            <label>(A) <input type="radio" name="q2" value="A">Input</label><br>
+            <label>(B) <input type="radio" name="q2" value="B">Processing</label><br>
+            <label>(C) <input type="radio" name="q2" value="C">Output</label><br>
+            <label>(D) <input type="radio" name="q2" value="D">None of these</label><br>
+        </h2>
+        <h2>
+            Q3. Which of the following Excel charts represents only one value for each<br>variable ?<br>
+            <label>(A) <input type="radio" name="q3" value="A">Function</label><br>
+            <label>(B) <input type="radio" name="q3" value="B">Line</label><br>
+            <label>(C) <input type="radio" name="q3" value="C">Pie</label><br>
+            <label>(D) <input type="radio" name="q3" value="D">Bar</label><br>
+        </h2>
+        <h2>
+            Q4. Printer is a _______ Device.<br>
+            <label>(A) <input type="radio" name="q4" value="A">Input</label><br>
+            <label>(B) <input type="radio" name="q4" value="B">Processing</label><br>
+            <label>(C) <input type="radio" name="q4" value="C">Output</label><br>
+            <label>(D) <input type="radio" name="q4" value="D">None of these</label><br>
+        </h2>
+        <h2>
+            Q5. Two basic types of graphics used in Word 2000 are ......<br>
+            <label>(A) <input type="radio" name="q5" value="A">Auto shapes and ClipArt</label><br>
+            <label>(B) <input type="radio" name="q5" value="B">Header and Footer</label><br>
+            <label>(C) <input type="radio" name="q5" value="C">Word count</label><br>
+            <label>(D) <input type="radio" name="q5" value="D">Spelling and Grammer</label><br>
+        </h2>
+        <h2>
+            Q6. Too see the document before the printout is taken use......<br>
+            <label>(A) <input type="radio" name="q6" value="A">Insert table</label><br>
+            <label>(B) <input type="radio" name="q6" value="B">Paste</label><br>
+            <label>(C) <input type="radio" name="q6" value="C">Format printer</label><br>
+            <label>(D) <input type="radio" name="q6" value="D">Print preview</label><br>
+        </h2>
+        <h2>
+            Q7. ALU works on the instruction and data held in the ......<br>
+            <label>(A) <input type="radio" name="q7" value="A">Notebook</label><br>
+            <label>(B) <input type="radio" name="q7" value="B">Registers</label><br>
+            <label>(C) <input type="radio" name="q7" value="C">Copy pad</label><br>
+            <label>(D) <input type="radio" name="q7" value="D">I/O devices</label><br>
+        </h2>
+        <h2>
+            Q8. To move data from one part of the document to another, following is <br> used ......<br>
+            <label>(A) <input type="radio" name="q8" value="A">Cut and Paste</label><br>
+            <label>(B) <input type="radio" name="q8" value="B">Copy and Paste</label><br>
+            <label>(C) <input type="radio" name="q8" value="C">Cut and delete</label><br>
+            <label>(D) <input type="radio" name="q8" value="D">Copy and delete</label><br>
+        </h2>
+        <h2>
+            Q9. Another name for a pre-programmed formula in Excel is ......<br>
+            <label>(A) <input type="radio" name="q9" value="A">Range</label><br>
+            <label>(B) <input type="radio" name="q9" value="B">Function</label><br>
+            <label>(C) <input type="radio" name="q9" value="C">Cell</label><br>
+            <label>(D) <input type="radio" name="q9" value="D">None of these</label><br>
+        </h2>
+        <h2>
+            Q10. What is a device that can change images into codes for the computers?<br>
+            <label>(A) <input type="radio" name="q10" value="A">Mouse</label><br>
+            <label>(B) <input type="radio" name="q10" value="B">Printer</label><br>
+            <label>(C) <input type="radio" name="q10" value="C">Joystick</label><br>
+            <label>(D) <input type="radio" name="q10" value="D">Scanner</label><br>
+        </h2><br>
+    </form>
+    <button id="submit">SUBMIT</button>
+    <br><br>
+
+
+    <div id="maincontaner-res">
+        <div class="result-show-head">
+        <div class="shailesh">Hey  <strong id="username"></strong>,</div>
+        <div class="div"><u>RESULT</u><span id="result_per"></span></div>
+        <div class="sc div"><span id="congratulation" class="s2"></span> <span id="knowledge"></span></div>
+    </div>
+        <table cellspacing="0">
+            <tr>
+                <td>S.No.</td>
+                <td>Subject Name</td>
+                <td>Total Questions</td>
+                <td>Question Attamped</td>
+                <td>Current Answers</td>
+                <td>% Total Gain</td>
+                <td>Status</td>
+            </tr>
+            <tr class="tr2">
+                <td>1 .</td>
+                <td>Comuter</td>
+                <td id="totl_Q">10</td>
+                <td id="Q_attempt">00</td>
+                <td id="curent_Q">00</td>
+                <td id="percent">00.00 %</td>
+                <td class="td1" id="status"></td>
+            </tr>
+        </table>
+        <!-- <div class="a2"><a href="home">GO TO Home</a></div> -->
+        <table class="tab2">
+            <tr class="tr3">
+                <td colspan="7"><img class="img1" src="../clothwebsite/img/logo.png" /><br>
+                    <span>Made by shailesh kumar. All right reseved</span>
+                    <span class="a5"> <a href="tel:6204918454,8228838513">Call Us: 6204918454 , 8228838513</a></span>
+                    <span class="a6">
+                        <!-- <a href="https://facebook.com"><img class="img2" align="right" src="../image/facebook.jpg" /></a> -->
+                        <a href="https://instagram.com/hey_shailesh_babu?igshid=ZDdkNTZiNTM="><img class="img2" align="right" src="https://cdn-icons-png.flaticon.com/512/174/174855.png"></a>
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
